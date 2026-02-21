@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      args:
+        - PUBLIC_APPWRITE_ENDPOINT=${PUBLIC_APPWRITE_ENDPOINT}
+        - PUBLIC_APPWRITE_PROJECT_ID=${PUBLIC_APPWRITE_PROJECT_ID}
+        - PUBLIC_APPWRITE_PROJECT_NAME=${PUBLIC_APPWRITE_PROJECT_NAME}
+        - GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
+    container_name: sexteo-stories
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:3000/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3

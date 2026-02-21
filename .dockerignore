@@ -1,0 +1,15 @@
+node_modules
+.svelte-kit
+build
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+.Brand
+README.md
+Dockerfile
+docker-compose.yml
+pnpm-lock.yaml
+package-lock.json
+npm-debug.log
