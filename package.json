@@ -1,0 +1,28 @@
+{
+    "name": "sexteo-app",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite dev",
+        "build": "vite build",
+        "preview": "vite preview",
+        "setup": "node scripts/setup-appwrite.js",
+        "seed": "node scripts/seed-demo.js",
+        "start": "node server.js"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^6.0.0",
+        "@sveltejs/adapter-node": "^5.5.3",
+        "@sveltejs/kit": "^2.21.0",
+        "@sveltejs/vite-plugin-svelte": "^5.0.0",
+        "svelte": "^5.0.0",
+        "vite": "^6.0.0"
+    },
+    "dependencies": {
+        "appwrite": "^17.0.0",
+        "dotenv": "^16.4.0",
+        "express": "^4.21.0",
+        "node-appwrite": "^15.0.0"
+    }
+}
